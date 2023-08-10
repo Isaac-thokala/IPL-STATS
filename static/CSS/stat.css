@@ -1,0 +1,29 @@
+.player{
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+.teamname{
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+table{
+  background-color: aliceblue;
+}
+th{
+  width: 500px;
+  height: 40px;
+}
+td{
+  width :160px;
+  text-align: center;
+}
+table{
+  border-collapse: collapse;
+}
+.division{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}

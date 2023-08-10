@@ -1,0 +1,50 @@
+.img{
+  width: 150px;
+  height :150px;
+  border-radius: 75px;
+  margin-right: 30px;
+}
+.runs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 500px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.mrpw{
+  margin-left: 470px;
+  font-size: 40px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+.mrp{
+  margin-top: 80px;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.runstable{
+  height: 40px;
+}
+table{
+  margin-left: 300px;
+  width: 600px;
+}
+.td{
+  text-align: center;
+  height: 30px;
+}
+.totalpage{
+  display: flex;
+  flex-direction: column;
+  flex: auto 1fr auto;
+}
+.downentry{
+  left:0px;
+  right:0px;
+}
+.matchpage{
+  color: white;
+}

@@ -1,0 +1,84 @@
+.outerdiv{
+  display : grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  background-color: rgb(86, 66, 175);
+}
+.leftdiv,.rightdiv{
+  display : grid;
+  text-align: center;
+  align-items: center;
+  height:70px;
+  margin-left: 10px;
+  background-color: white;
+}
+.delivery,.bowler,.onstrike,.offstrike{
+  color : black;
+  font-size: 20px;
+  display: flex;
+}
+.totalpage{
+  display: flex;
+  flex-direction: column;
+  flex: auto 1fr auto;
+}
+.downentry{
+  margin-top: 100px;
+  left:0px;
+  right:0px;
+}
+.matchdet{
+  margin-top: 20px;
+  display: flex;
+  flex :1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.det1{
+  min-width: 45px;
+}
+.det2,.det3{
+  min-width :265px;
+}
+.det4,.det5{
+  min-width :210.95px;
+}
+.det6{
+  min-width : 150px;
+}
+.img{
+  width:25px;
+  height:25px;
+  margin: 0;
+  border: 0;
+}
+.left_part{
+  width :20px;
+}
+.middle_part{
+  width :20px;
+}
+.third_part{
+  width :350px;
+}
+.last_part{
+  width:200px;
+}
+.bf{
+  width :300px;
+}
+.lf{
+  width :200px;
+}
+.omstrike{
+  text-align: center; 
+  margin-left: 10px;
+}
+.middle_partd{
+  margin-top: 500px;
+}
+.matchpage{
+  color:white;
+}

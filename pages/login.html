@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>LOGIN PAGE</title>
+
+    <link href="../static/CSS/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+  </head>
+  <body>
+    <div class="header_entry">
+      <div style="flex:1" class="ipl_part">
+        <div>
+          <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+        </div>
+        <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+          <a class="home" href="./home.html">IPL 2020</a>
+        </div>
+      </div>
+      <div  style="flex:1" class="middle_header">
+        <div class="right_boxes">
+          <a class="right_box" href="./matches.html">Matches</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="./home.html">Teams</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="./player.html">Players</a>
+        </div>
+        <div class="dropdown"><!--can use select once check-->
+          <button class="dropbtn">More ...</button>
+          <div class="dropdown-content">
+            <a class="dropdown" href="./delivery.html">DELIVERIES</a>
+            <a class="dropdown" href="./mvp.html">MVP</a>
+            <a class="dropdown" href="#">ABOUT</a>
+            <a class="dropdown" href="./admin.html">ADMIN</a>
+          </div>
+        </div>
+      </div>
+      <div class="right_header">
+        <button onclick="location.href='./login.html'" class="but" type="button">login</button>
+        <form autocomplete="on"><input class="Search_bar" type="text" placeholder="  Search..."></form>
+      </div>
+    </div>
+      <div class="right_header">
+        <!--<form>
+          <input type="button" value="login" onclick="goToInteralLink('./login.html')"/>
+        </form>-->
+        <button onclick="location.href='./login.html'" class="but" type="button">login</button>
+        <input class="Search_bar" type="text" placeholder="  Search...">
+      </div>
+    </div>
+    <div class="sign">Please Sign In</div>
+    <form action="./xxx.zinga" autocomplete="on">
+      <div class="input"><input class="inside" type="text" placeholder="name@gmail.com    "><br></div><!--in javascript need to be removed-->
+      <div class="input"><input class="inside" type="password" placeholder="password..    "><br></div><!--in javascript need to be removed-->
+      <div class="button"><input class="inside" type="submit" value="submit"></div><!--in javascript need to be removed-->
+    </form>
+    <footer class="footer_entry">
+      <small>copyrights<sup>R</sup></small>
+    </footer>
+  </body>
+</html>

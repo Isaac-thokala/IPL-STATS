@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--for device compatibiliity-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/table.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+  </head>
+  <body>
+    <div class="header_entry">
+      <div style="flex:1" class="ipl_part">
+        <div>
+          <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+        </div>
+        <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+          <a class="home" href="./home.html">IPL 2020</a>
+        </div>
+      </div>
+      <div  style="flex:1" class="middle_header">
+        <div class="right_boxes">
+          <a class="right_box" href="./matches.html">Matches</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="./home.html">Teams</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="./player.html">Players</a>
+        </div>
+        <div class="dropdown"><!--can use select once check-->
+          <button class="dropbtn">More ...</button>
+          <div class="dropdown-content">
+            <a class="dropdown" href="./delivery.html">DELIVERIES</a>
+            <a class="dropdown" href="./mvp.html">MVP</a>
+            <a class="dropdown" href="#">ABOUT</a>
+            <a class="dropdown" href="./admin.html">ADMIN</a>
+          </div>
+        </div>
+      </div>
+      <div class="right_header">
+        <button onclick="location.href='./login.html'" class="but" type="button">login</button>
+        <form autocomplete="on"><input class="Search_bar" type="text" placeholder="  Search..."></form>
+      </div>
+    </div>
+    <!--<div class="background">
+        <img src="../static/images/images.jpg" alt="MUMBAI INDIANS">
+    </div>-->
+    <div class="ipl2020">
+      <a>MUMBAI INDIANS</a>
+    </div>
+    <div style="overflow-x: auto;">
+      <table>
+        <thead>
+        <tr class="header_table">
+          <th>POS</th>
+          <th>TEAM</th>
+          <th>PLAYED</th>
+          <th>WON</th>
+          <th>LOST</th>
+          <th>TIED</th>
+          <th>POINTS</th>
+          <th>NRR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="grayrow">
+          <td>1</td>
+          <td class="teami">
+            <a class="team_name" href="./team.html"> MUMBAI INDIANS</a>
+          </td>
+          <td>7</td>
+          <td>7</td>
+          <td>0</td>
+          <td>0</td>
+          <td>14</td>
+          <td>1.435</td>
+        </tr>
+        <tr class="whiterow">
+          <td>2</td>
+          <td class="teami">
+            <a class="team_name" href="./team.html">CHENNAI BETTING KINGS</a>
+          </td>
+          <td>7</td>
+          <td>4</td>
+          <td>3</td>
+          <td>0</td>
+          <td>8</td>
+          <td>0.754</td>
+        </tr>
+        <tr class="grayrow">
+          <td>3</td>
+          <td class="teami" >
+            <a class="team_name" href="./team.html">GUJARAT LIONS</a>
+          </td>
+          <td>7</td>
+          <td>3</td>
+          <td>4</td>
+          <td>0</td>
+          <td>6</td>
+          <td>0.437</td>
+        </tr>
+        <tr class="whiterow">
+          <td>4</td>
+          <td class="teami">
+            <a class="team_name" href="./team.html">Royal Chanllangers Banglore</a>
+          </td>
+          <td>7</td>
+          <td>1</td>
+          <td>6</td>
+          <td>0</td>
+          <td>2</td>
+          <td>-0.765</td>
+        </tr>
+        <tr class="grayrow">
+          <td>1</td>
+          <td class="teami">
+            <a class="team_name" href="./team.html">MUMBAI INDIANS</a>
+          </td>
+          <td>7</td>
+          <td>7</td>
+          <td>0</td>
+          <td>0</td>
+          <td>14</td>
+          <td>1.435</td>
+        </tr>
+        <tr class="whiterow">
+          <td>2</td>
+          <td class="teami">
+            <a class="team_name" href="./team.html">CHENNAI BETTING KINGS</a>
+          </td>
+          <td>7</td>
+          <td>4</td>
+          <td>3</td>
+          <td>0</td>
+          <td>8</td>
+          <td>0.754</td>
+        </tr>
+        <tr class="grayrow">
+          <td>3</td>
+          <td class="teami" >
+            <a class="team_name" href="./team.html">GUJARAT LIONS</a>
+          </td>
+          <td>7</td>
+          <td>3</td>
+          <td>4</td>
+          <td>0</td>
+          <td>6</td>
+          <td>0.437</td>
+        </tr>
+        <tr class="whiterow">
+          <td>4</td>
+          <td class="teami">
+            <a class="team_name" href="./team.html">Royal Chanllangers Banglore</a>
+          </td>
+          <td>7</td>
+          <td>1</td>
+          <td>6</td>
+          <td>0</td>
+          <td>2</td>
+          <td>-0.765</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  <footer class="footer_entry">
+    <small>copyrights<sup>R</sup></small>
+  </footer>
+  </body>
+</html>

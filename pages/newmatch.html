@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      input{
+        width: 200px;
+        height: 30px;
+        text-align: center;
+      }
+      html{
+        background-color:whitesmoke;
+      }
+    </style>
+    <link rel="stylesheet" href="../static/CSS/matches.css">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+    <link rel="stylesheet" href="mvp.css">
+  </head>
+  <div class="totalpage">
+    <div>
+      <div class="header_entry">
+        <div style="flex:1" class="ipl_part">
+          <div>
+            <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+          </div>
+          <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+            <!--<abbr title="INDIAN PREMIER LEAGUE">IPL 2020</abbr>-->
+            <a class="home" href="./home.html">IPL 2020</a>
+          </div>
+        </div>
+        <div  style="flex:1" class="middle_header">
+          <div class="right_boxes">
+
+            <a class="matchpage" href="./matches.html">Matches</a>
+          </div>
+          <div class="right_boxes">
+            <a class="matchpage" href="./team.html">Teams</a>
+          </div>
+          <div class="right_boxes">
+            <a class="matchpage" href="./player.html">Squad</a>
+
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a class="dropdown" href="./delivery.html">DELIVERIES</a>
+              <a class="dropdown" href="./mvp.html">MVP</a>
+              <a class="dropdown" href="#">ABOUT</a>
+              <a class="dropdown" href="./admin.html">ADMIN</a>
+            </div>
+          </div>
+        </div>
+        <div class="right_header">
+            <!--<form>
+              <input type="button" value="login" onclick="goToInteralLink('./login.html')"/>
+            </form>-->
+          <button onclick="location.href='./login.html'" class="but" type="button">login</button>
+          <input class="Search_bar" type="text" placeholder="  Search...">
+        </div>
+      </div>
+    </div>
+    <div class="middlepart"  style="margin-top:190px;">
+      <body>
+      <div style="text-align:center">
+        <div style="margin-top:40px;"><input  type="text" name="match_id" placeholder="match_id"></div>
+        <div style="margin-top:20px;"><input type="text" name="time" placeholder="time"></div>
+        <div style="margin-top:20px;"><input type="text" name="date" placeholder="date"></div>
+        <div style="margin-top:20px;"><input type="text" name="team1_id" placeholder="team1_id"></div>
+        <div style="margin-top:20px;"><input type="text" name="team1_name" placeholder="team1_name"></div>
+        <div style="margin-top:20px;"><input type="text" name="team2_id" placeholder="team2_id"></div>
+        <div style="margin-top:20px;"><input type="text" name="team2_name" placeholder="team2_name"></div>
+        <div style="margin-top:20px;"><input type="text" name="venue" placeholder="venue"></div>
+        <div style="margin-top:20px;"><input type="text" name="city" placeholder="city"></div>
+        <div style="margin-top:20px;"><input type="text" name="toss_win_tid" placeholder="toss_win_tid"></div>
+        <div style="margin-top:20px;"><input type="text" name="toss_win_tname" placeholder="toss_win_tname"></div>
+        <div style="margin-top:20px;"><input type="text" name="toss_decision" placeholder="toss_decision"></div>
+        <div style="margin-top:20px;"><input type="text" name="winner_tid" placeholder="winner_tid"></div>
+        <div style="margin-top:20px;"><input type="text" name="winner_tname" placeholder="winner_tname"></div>
+        <div style="margin-top:20px;"><input type="text" name="result" placeholder="result"></div>
+        <div style="margin-top:20px;"><input type="text" name="result_margin" placeholder="result_margin"></div>
+        <div style="margin-top:20px;"><input type="text" name="umpire1" placeholder="umpire1"></div>
+        <div style="margin-top:20px;"><input type="text" name="umpire2" placeholder="umpire2"></div>
+        <div style="margin-top:20px;"><input type="text" name="team1_runs" placeholder="team1_runs"></div>
+        <div style="margin-top:20px;"><input type="text" name="team2_runs" placeholder="team2_runs"></div>
+        <div style="margin-top:20px;"><input type="text" name="team1_runs" placeholder="team1_wickets"></div>
+        <div style="margin-top:20px;"><input type="text" name="team2_runs" placeholder="team2_wickets"></div>
+        <div style="margin-top:20px;"><input type="text" name="man_of_match_pid" placeholder="man_of_match_pid"></div>
+        <div style="margin-top:20px;"><input type="text" name="man_of_match_pname" placeholder="man_of_match_pname"></div>
+        <div style="margin-top: 50px;">
+          <form action="name.py">
+            <input type="submit">
+          </form>
+        </div>
+      </div>
+      </body>
+    </div>
+    <div class="downentry"  style="margin-top:50px;">
+      <footer class="footer_entry">
+        <small>copyrights<sup>R</sup></small>
+      </footer>
+    </div>
+  </div>
+</html>
