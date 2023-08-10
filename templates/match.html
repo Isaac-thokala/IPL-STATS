@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/CSS/matches.css">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+    <link rel="stylesheet" href="../static/CSS/match.css">
+  </head>
+  <div class="totalpage">
+    <div>
+       <div class="header_entry">
+      <div style="flex:1" class="ipl_part">
+        <div>
+          <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+        </div>
+        <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+          <a class="home" href="/">IPL</a>
+        </div>
+      </div>
+      <div  style="flex:1" class="middle_header">
+        <div class="right_boxes">
+          <a class="right_box" href="/matches">Matches</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/">Teams</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/players">Players</a>
+        </div>
+        <div class="dropdown"><!--can use select once check-->
+          <button class="dropbtn">More ...</button>
+          <div class="dropdown-content">
+            <!--<a class="dropdown" href="/deliveries/mid={{ match[0] }}">DELIVERIES</a> -->
+            <a class="dropdown" href="/mvp">MVP</a>
+            <a class="dropdown" href="#">ABOUT</a>
+            <a class="dropdown" href="#">ADMIN</a>
+          </div>
+        </div>
+      </div>
+      <div class="right_header">
+        <button onclick="location.href='/login'" class="but" type="button">login</button>
+        <form autocomplete="on"><input class="Search_bar" type="text" placeholder="  Search..."></form>
+      </div>
+    </div>
+
+    <div class="middlepart">
+      <body>
+        <div class="headingl">MUMBAI INDIANS WON THE TOSS AND CHOOSE TO BAT</div>
+        <div class="heading">MUMBAI WON BY 2 WICKETS</div>
+        <div class="heading" style="background-color:white">
+          {{match[1].strftime("%A %d %B %Y")}}
+
+        </div>
+        <div class="heading" style="background-color:white">
+          {{ match[6] }} , {{ match[7] }}
+
+        </div>
+        <div class="left_box">
+
+        </div>
+        <div class="insidematch">
+          <div class="left_boxw">
+            <div class="team_name">
+
+              <div><img class="imagemum" src="../static/images/{{ match[3]}}.png" alt="mumbai indians"></div>
+
+              <div>
+                <p>{{ match[3] }}</p>
+                <p class="score">{{match[17]}}/{{ match[19] }} </p>
+              </div>
+            </div>
+            <div class="table_matchl">
+              <table class="tablem">
+
+
+                <th colspan="2" class="rowe">
+                  BATTING
+                </th>
+
+                {% for player in players : %}
+                {% if player[1] == match[3] and loop.index <= 8 : %}
+                <tr class="trow">
+                  <td class="rowe">
+                   {{ player[0] }}
+                  </td>
+                  <td class="rowe">
+                    {{ player[2] }} ({{ player[3] }})
+                  </td>
+                </tr>
+                {% endif %}
+                 {% endfor %}
+
+                <th colspan="2">
+                  BOWLING
+                </th>
+                {% for bowler in bowlers : %}
+                {% if bowler[1] == match[3] and (bowler[2] >0 or bowler[3] >0 ): %}
+                <tr class="trow">
+                  <td class="rowe">
+                   {{ bowler[0] }}
+                  </td>
+                  <td class="rowe">
+                    {{ bowler[2] }} - {{ bowler[3] }}/({{ int(bowler[4]/6) }})
+                  </td>
+                </tr>
+                {% endif %}
+                 {% endfor %}
+
+              </table>
+            </div>
+          </div>
+          <div class="versus">
+            <p>vs</p>
+            <p>{{ match[15] }}</p>
+            <p>{{ match[16] }}</p>
+          </div>
+          <div class="left_boxw">
+            <div class="team_name">
+              <div><img class="imagemum" src="../static/images/{{ match[5]}}.png" alt="mumbai indians"></div>
+              <div>
+                <p>{{ match[5] }}</p>
+                <p class="score">{{match[18]}}/ {{ match[20] }}</p>
+
+              </div>
+            </div>
+            <div class="table_matchl">
+              <table class="tablem">
+                <th colspan="2" class="rowe">
+                  BATTING
+                </th>
+                {% for player in players : %}
+                {% if player[1] == match[5] and loop.index <= 8 : %}
+                <tr class="trow">
+                  <td class="rowe">
+                   {{ player[0] }}
+                  </td>
+                  <td class="rowe">
+                    {{ player[2] }} ({{ player[3] }})
+                  </td>
+                </tr>
+                {% endif %}
+                 {% endfor %}
+
+                <th colspan="2">
+                  BOWLING
+                </th>
+
+                 {% for bowler in bowlers : %}
+                {% if bowler[1] == match[5] and (bowler[2] >0 or bowler[3] >0 ): %}
+                <tr class="trow">
+                  <td class="rowe">
+                   {{ bowler[0] }}
+                  </td>
+                  <td class="rowe">
+                    {{ bowler[2] }} - {{ bowler[3] }}/({{ int(bowler[4]/6) }})
+                  </td>
+                </tr>
+                {% endif %}
+                 {% endfor %}
+
+              </table>
+            </div>
+          </div>
+        </div>
+      </body>
+    </div>
+    <div class="downentry">
+      <footer class="footer_entry">
+        <small>copyrights<sup>R</sup></small>
+      </footer>
+    </div>
+  </div>
+</html>

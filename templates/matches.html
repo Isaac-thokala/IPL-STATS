@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/CSS/matches.css">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+  </head>
+  <body>
+    <div class="header_entry">
+      <div style="flex:1" class="ipl_part">
+        <div>
+          <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+        </div>
+        <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+          <a class="home" href="/">IPL</a>
+        </div>
+      </div>
+      <div  style="flex:1" class="middle_header">
+        <div class="right_boxes">
+          <a class="right_box" href="/matches">Matches</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/">Teams</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/players">Players</a>
+        </div>
+        <div class="dropdown"><!--can use select once check-->
+          <button class="dropbtn">More ...</button>
+          <div class="dropdown-content">
+            <a class="dropdown" href="/mvp">MVP</a>
+            <a class="dropdown" href="#">ABOUT</a>
+            <a class="dropdown" href="#">ADMIN</a>
+          </div>
+        </div>
+      </div>
+      <div class="right_header">
+        <button onclick="location.href='/login'" class="but" type="button">login</button>
+        <form autocomplete="on"><input class="Search_bar" type="text" placeholder="  Search..."></form>
+      </div>
+    </div>
+    <div class="empty"></div>
+    {% for match in matches : %}
+    <div class="first_match">
+      {% if match[13] == 'runs': %}
+    <div class="heading">{{match[12]}} WON BY {{abs(match[17] - match[18])}} {{match[13]}}</div>
+      {% else : %}
+      {% if match[17] > match[18] : %}
+      <div class="heading">{{match[12]}} WON BY {{10 - match[19]}}</div>
+      {% else : %}
+      <div class="heading">{{match[12]}} WON BY {{10 - match[20]}}</div>
+      {% endif %}
+      {% endif %}
+    <div class="insidematch"  onclick="window.location.href = '/match/mid={{ match[0] }}';">
+        <div class="left_box">
+            <p>{{match[1].strftime("%A %d %B %Y")}}</p>
+            <p>{{ match[6] }} , {{ match[7] }}</p>
+        </div>
+        <div class="middle_boxw">
+          <div class="team_name">
+            <div><img class="imagemum" src="../static/images/{{ match[3] }}.png" alt="{{ match[3] }}"></div>
+            <div>
+              <p>{{ match[3] }}</p>
+              <p class="score">{{match[17]}}/{{ match[19] }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="versus">
+          vs
+        </div>
+        <div class="middle_boxl">
+          <div class="team_name">
+            <div><img class="imagemum" src="../static/images/{{ match[5] }}.png" alt="{{ match[5] }}"></div>
+            <div>
+              <p>{{ match[5] }}</p>
+              <p class="score">{{match[18]}}/ {{ match[20] }}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+
+
+
+    <footer class="footer_entry">
+      <small>copyrights<sup>R</sup></small>
+    </footer>
+  </body>
+</html>

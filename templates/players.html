@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/CSS/player.css">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+  </head>
+  <body>
+    <div class="header_entry">
+      <div style="flex:1" class="ipl_part">
+        <div>
+          <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+        </div>
+        <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+          <a class="home" href="/">IPL</a>
+        </div>
+      </div>
+      <div  style="flex:1" class="middle_header">
+        <div class="right_boxes">
+          <a class="right_box" href="/matches">Matches</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/">Teams</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/players">Players</a>
+        </div>
+        <div class="dropdown"><!--can use select once check-->
+          <button class="dropbtn">More ...</button>
+          <div class="dropdown-content">
+
+            <a class="dropdown" href="/mvp">MVP</a>
+            <a class="dropdown" href="#">ABOUT</a>
+            <a class="dropdown" href="#">ADMIN</a>
+          </div>
+        </div>
+      </div>
+      <div class="right_header">
+        <button onclick="location.href='/login'" class="but" type="button">login</button>
+        <form autocomplete="on"><input class="Search_bar" type="text" placeholder="  Search..."></form>
+      </div>
+    </div>
+    <div>
+      <table>
+    <thead>
+      <tr class="thead">
+        <th>
+          name
+        </th>
+        <th>
+          team_id
+        </th>
+        <th>
+          team_name
+        </th>
+        <th>
+          runs
+        </th>
+        <th>
+          wickets
+        </th>
+        <th>
+          sixers
+        </th>
+        <th>
+          fours
+        </th>
+        <th>
+          srtike_rate
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for player in players %}
+    <tr onclick="window.location.href = '/player/pid={{player[0]}}';">
+      <td>
+        {{ player[1] }}
+      </td>
+      <td>
+        {{ player[2] }}
+      </td>
+      <td>
+        {{ player[3] }}
+      </td>
+      <td>
+        {{ player[4] }}
+      </td>
+      <td>
+        {{ player[5] }}
+      <td>
+        {{ player[9] }}
+      </td>
+      <td>
+        {{ player[10] }}
+      </td>
+      <td>
+        {{ player[16] }}
+      </td>
+    </tr>
+    {% endfor %}
+
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+<footer class="footer_entry">
+  <small>copyrights<sup>R</sup></small>
+</footer>
+</body>
+</html>

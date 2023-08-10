@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/CSS/matches.css">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+    <link rel="stylesheet" href="../static/CSS/delivery.css">
+  </head>
+  <div class="totalpage">
+    <div>
+      <div class="header_entry">
+        <div style="flex:1" class="ipl_part">
+          <div>
+            <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+          </div>
+          <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+            <!--<abbr title="INDIAN PREMIER LEAGUE">IPL 2020</abbr>-->
+            <a class="home" href="/">IPL 2020</a>
+          </div>
+        </div>
+        <div  style="flex:1" class="middle_header">
+          <div class="right_boxes">
+
+            <a class="matchpage" href="/matches">Matches</a>
+          </div>
+          <div class="right_boxes">
+            <a class="matchpage" href="/">Teams</a>
+          </div>
+          <div class="right_boxes">
+            <a class="matchpage" href="/player">Squad</a>
+
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="./delivery.html">DELIVERIES</a>
+              <a href="./mvp.html">mvp</a>
+              <a href="#">ABOUT</a>
+              <a href="#">ADMIN</a>
+            </div>
+          </div>
+        </div>
+        <div class="right_header">
+            <!--<form>
+              <input type="button" value="login" onclick="goToInteralLink('./login.html')"/>
+            </form>-->
+          <button onclick="location.href='/login'" class="but" type="button">login</button>
+          <input class="Search_bar" type="text" placeholder="  Search...">
+        </div>
+      </div>
+    </div>
+    <div class="middlepartd">
+      <body>
+        <div class="matchdet">
+          <div class="det1">43</div>
+          <div class="det2">MUMBAI INDIANS<sup><img class="img" src="../static/images/bat.png"></sup></div>
+          <div class="det3">CHENNAI SUPER KINGS<img class="img" src="../static/images/ball2.png"></div>
+          <div class="det4">WANKHADE , MUMBAI </div>
+          <div class="det5">BHOGLE</div>
+          <div class="det6">SHASTHRI</div>
+          <div class="det7">97/5<img class="img" src="../static/images/live.png"></div>
+        </div>
+        {% for delivery in deliveries : %}
+        <div class="outerdiv">
+          <div class="leftdiv">
+            <div class="delivery">
+
+              <div class="left_part">&#8594;</div>
+              <div class="middle_part">{{ delivery[3] }}</div>
+              <div><sub>&#8226;</sub>{{ delivery[4] }}</div>
+              <div class="third_part"> runs</div>
+              <div class="last_part">extras(2wd 4lb 1nb)   </div>
+            </div>
+            <div class="bowler">
+              <div class="bf">bowler<img class="img" src="../static/images/ball2.png"></div>
+              <div>:</div>
+              <div class="lf">runs(overs)</div>
+            </div>
+          </div>
+          <div class="rightdiv">
+            <div  style="margin-left: 10px" class="onstrike">
+              rohit sharma : runs(balls)
+              <div style="margin-left:30px"><img class="img" src="../static/images/bat.png"></div>
+              <!--on strike batsmen runs(balls) : once dismissed (dismissal type)
+              if dismissed hover color change-->
+            </div>
+            <div style="margin-left: 10px"  class="offstrike">
+              surya kumar : runs(balls)
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </body>
+    </div>
+    <div class="downentry">
+      <footer class="footer_entry">
+        <small>copyrights<sup>R</sup></small>
+      </footer>
+    </div>
+  </div>
+</html>

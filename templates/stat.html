@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/CSS/stat.css">
+    <link rel="stylesheet" href="../static/CSS/header.css">
+    <link rel="stylesheet" href="../static/CSS/dropdownstyle.css">
+  </head>
+  <body>
+    <div class="header_entry">
+      <div style="flex:1" class="ipl_part">
+        <div>
+          <img class="ipl_logo" src="../static/images/ipl.jpg" alt="IPL 2020">
+        </div>
+        <div style="margin-left:10px; font-style: italic; font-size: 30px;">
+          <a class="home" href="/">IPL </a>
+        </div>
+      </div>
+      <div  style="flex:1" class="middle_header">
+        <div class="right_boxes">
+          <a class="right_box" href="/matches">Matches</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/">Teams</a>
+        </div>
+        <div class="right_boxes">
+          <a class="right_box" href="/players">Players</a>
+        </div>
+        <div class="dropdown"><!--can use select once check-->
+          <button class="dropbtn">More ...</button>
+          <div class="dropdown-content">
+
+            <a class="dropdown" href="/mvp">MVP</a>
+            <a class="dropdown" href="#">ABOUT</a>
+            <a class="dropdown" href="#">ADMIN</a>
+          </div>
+        </div>
+      </div>
+      <div class="right_header">
+        <button onclick="location.href='/login'" class="but" type="button">login</button>
+        <form autocomplete="on"><input class="Search_bar" type="text" placeholder="  Search..."></form>
+      </div>
+    </div>
+    <div class="player">{{player[1]}}</div>
+    <div class="teamname">{{ player[3] }}</div>
+    <div class="division">
+    <div class="batting">
+      <table>
+        <tr>
+          <th>
+            teamname
+          </th>
+          <td>
+           {{ player[3] }}
+          </td>
+        </tr>
+          <tr>
+            <th>
+              teamid
+            </th>
+            <td>
+              {{ player[2] }}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              playerid
+            </th>
+            <td>
+              {{ player[0] }}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              runs
+            </th>
+            <td>
+              {{ player[4]}}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              strike rate
+            </td>
+            <td>
+              {{ player[-2]}}
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <th>
+              balls_faced
+            </th>
+            <td>
+              {{ player[8] }}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              sixes
+            </th>
+            <td>
+              {{ player[9] }}
+            </td>
+          </tr>
+      </table>
+    </div>
+    <div class="batting">
+      <table>
+        <tr>
+          <th>
+            wickets taken
+          </th>
+          <td>
+            {{ player[5] }}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            runs given
+          </th>
+          <td>
+            {{ player[-1] }}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            average
+          </th>
+          <td>
+             {{ int(player[4] /14) }}
+          </td>
+        </tr>
+
+
+        <tr>
+          <th>
+            balls_bowled
+          </th>
+          <td>
+            {{ player[-6] }}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            fours
+          </th>
+          <td>
+            {{ player[10] }}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            run_outs
+          </th>
+          <td>
+             {{ player[-5]}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            run_outs_taken
+          </th>
+          <td>
+            {{ player[-4]}}
+          </td>
+        </tr>
+        <tr>
+          <th>
+            catches
+          </th>
+          <td>
+             {{ player[-3] }}
+          </td>
+        </tr>
+    </table>
+  </div>
+  </div>
+  <footer class="footer_entry">
+    <small>copyrights<sup>R</sup></small>
+  </footer>
+  </body>
+</html>
+
+
